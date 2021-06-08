@@ -2,17 +2,30 @@ const questions = require ("./utils/questions");
 const inquirer = require ('inquirer');
 const Employee = require ("./lib/Employee");
 const { async } = require("rxjs");
+const Manager = require("./lib/Manager");
+
+const htmlCardArray = []
+
 
 async function main (){
-    const manager = await inquirer.prompt(questions)
-      
-    //htmlCardArray = [];
+   //Ask manager questions  
+    const managerAnswers = await inquirer.prompt(questions.managerQuestions)
+    //get only answers values 
+    const managerParameters = Object.values(managerAnswers);
 
-    //generate Manager 
-      //ask questions
       //create new manager based on Obj properties
+      const manager = new Manager(...managerParameters)
+
+      //create employee html string
+      const employeeCard = generateEmployeeHtml(manager)
+    
       //push to htmlCardArray
+      htmlCardArray.push(employeeCard)
+
       //to mainMenu
+      mainMenu()
+
+};
 
     //generate Engineer
       //ask questions
@@ -30,9 +43,24 @@ async function main (){
       //gerenate Engineer
       //generate Intern
       //bye. 
+//main menu function
+function mainMenu(){
+  console.log("main menu")
 }
-
 //build htmlString
+function generateEmployeeHtml(employee) {
+  return `
+  <div>
+    name: ${employee.name},
+    id: ${employee.id},
+    email: ${employee.email},
+    role: ${employee.getRole()}
+</div>
+`
+
+
+};
+
 function buildHtmlString(htmlCardArray) {
   `<!DOCTYPE html>
   <html lang="en" class="h-100">
@@ -75,4 +103,5 @@ function buildHtmlString(htmlCardArray) {
 }
 //save string to index.html
 
-
+//Start here
+main()

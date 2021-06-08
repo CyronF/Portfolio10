@@ -11,12 +11,12 @@ module.exports = {
     },
 
     {
-      message: "Wat is your email?",
+      message: "What is your email?",
       name: "email",
     },
 
     {
-      message: "Wat is your office number",
+      message: "What is your office number",
       name: "office number",
     }
   ],
@@ -35,7 +35,7 @@ module.exports = {
       name: "email",
     },
     {
-      message: "Wat is your Github username?",
+      message: "What is your Github username?",
       name: "github",
     }
   ],
@@ -50,11 +50,11 @@ module.exports = {
       name: "id"
     },
     {
-      message: "Wat is your email?",
+      message: "What is your email?",
       name: "email",
     },
     {
-      message: "Wat is the name of your school?",
+      message: "What is the name of your school?",
       name: "school",
     }
   ]
