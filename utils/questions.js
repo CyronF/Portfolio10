@@ -57,5 +57,18 @@ module.exports = {
       message: "What is the name of your school?",
       name: "school",
     }
+  ],
+  mainMenuQuestions: [
+    {
+      message: "What would you like to do next?",
+      name: "mainMenu", 
+      type: "list", 
+      choices: [
+        "Add another Engineer", 
+        "Add an Intern", 
+        "Bye"
+      ]
+    },
   ]
+
 };

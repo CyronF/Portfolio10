@@ -44,8 +44,9 @@ async function main (){
       //generate Intern
       //bye. 
 //main menu function
-function mainMenu(){
-  console.log("main menu")
+async function mainMenu(){
+  //getUserChoice
+  const {mainMenu} = await inquirer.prompt(questions.mainMenuQuestions)
 }
 //build htmlString
 function generateEmployeeHtml(employee) {
