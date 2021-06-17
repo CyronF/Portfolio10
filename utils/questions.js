@@ -16,8 +16,8 @@ module.exports = {
     },
 
     {
-      message: "What is your office number",
-      name: "office number",
+      message: "What is your office number?",
+      name: "office",
     }
   ],
 
@@ -58,6 +58,7 @@ module.exports = {
       name: "school",
     }
   ],
+  
   mainMenuQuestions: [
     {
       message: "What would you like to do next?",
@@ -71,4 +72,4 @@ module.exports = {
     },
   ]
 
-};
+}
